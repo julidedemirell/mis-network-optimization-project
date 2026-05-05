@@ -1,0 +1,15 @@
+source,target,travel_time_min,distance_km,cost_usd
+Warehouse_Istanbul,Hub_Kadikoy,25,18,12
+Warehouse_Istanbul,Hub_Besiktas,20,14,9
+Warehouse_Istanbul,Hub_Sisli,15,10,7
+Hub_Kadikoy,Distribution_Atasehir,18,12,8
+Hub_Kadikoy,Distribution_Maltepe,22,16,10
+Hub_Besiktas,Hub_Sisli,12,8,5
+Hub_Besiktas,Distribution_Sariyer,30,22,14
+Hub_Sisli,Distribution_Kagithane,14,9,6
+Hub_Sisli,Distribution_Eyup,18,13,8
+Distribution_Atasehir,Customer_Zone_A,10,6,4
+Distribution_Maltepe,Customer_Zone_A,15,10,6
+Distribution_Sariyer,Customer_Zone_B,12,7,5
+Distribution_Kagithane,Customer_Zone_B,20,14,9
+Distribution_Eyup,Customer_Zone_B,16,11,7
