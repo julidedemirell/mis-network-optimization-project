@@ -70,6 +70,23 @@ The primary optimization weight used is `travel_time_min`, as same-day delivery 
 | Distribution_Kagithane | Customer_Zone_B | 20 | 14 | 9 |
 | Distribution_Eyup | Customer_Zone_B | 16 | 11 | 7 |
 
+### Dataset Column Descriptions & Assumptions
+
+| Column | Unit | Meaning |
+|--------|------|---------|
+| `source` | — | Origin location of the delivery link |
+| `target` | — | Destination location of the delivery link |
+| `travel_time_min` | Minutes | Estimated travel time between two locations under average Istanbul traffic conditions during business hours (9:00–18:00). This is the primary optimization weight. |
+| `distance_km` | Kilometers | Approximate road distance between two locations based on Istanbul's road network. |
+| `cost_usd` | US Dollars | Estimated operational cost per trip (fuel, driver time, vehicle wear) converted to USD. |
+
+**Assumptions:**
+- Travel times reflect average Istanbul traffic during business hours; peak-hour congestion is not modeled.
+- Distances are approximate road distances, not straight-line (Euclidean) distances.
+- Costs are hypothetical estimates representing realistic last-mile delivery economics in Istanbul.
+- All data is hypothetical but grounded in realistic Istanbul logistics infrastructure and geography.
+- The network is directed: deliveries flow strictly from Warehouse → Hub → Distribution Center → Customer Zone.
+
 ---
 
 ## 5. Selected Algorithm
@@ -125,6 +142,7 @@ The shortest path analysis provides two key operational insights:
 ### Prerequisites
 
 ### Run the solution
+
 This will:
 - Print the network data and shortest path results to the console
 - Save `results/network_visualization.png`
@@ -134,9 +152,9 @@ This will:
 
 ## 10. References
 
+See `references/references.md` for full citations.
+
 - Dijkstra, E. W. (1959). A note on two problems in connexion with graphs. *Numerische Mathematik*, 1(1), 269–271.
 - NetworkX Documentation: https://networkx.org/documentation/stable/
 - Chopra, S., & Meindl, P. (2016). *Supply Chain Management: Strategy, Planning, and Operation* (6th ed.). Pearson.
 - Turban, E., Volonino, L., & Wood, G. (2015). *Information Technology for Management*. Wiley.
-
-
