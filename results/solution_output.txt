@@ -1,0 +1,24 @@
+E-COMMERCE LOGISTICS NETWORK OPTIMIZATION
+Shortest Path Analysis Results
+============================================================
+
+Target: Customer_Zone_A
+  Route        : Warehouse_Istanbul -> Hub_Kadikoy -> Distribution_Atasehir -> Customer_Zone_A
+  Travel Time  : 53 minutes
+  Distance     : 36 km
+  Cost         : $24
+
+Target: Customer_Zone_B
+  Route        : Warehouse_Istanbul -> Hub_Sisli -> Distribution_Kagithane -> Customer_Zone_B
+  Travel Time  : 49 minutes
+  Distance     : 33 km
+  Cost         : $22
+
+
+Managerial Interpretation
+------------------------------------------------------------
+The shortest path algorithm reveals that both customer zones can be
+reached within 49-53 minutes from the central warehouse. Zone A is best
+served via the Kadikoy hub route, while Zone B benefits from the Sisli-
+Kagithane corridor. Management should prioritize maintaining capacity on
+these two critical corridors.
