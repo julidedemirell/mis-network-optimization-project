@@ -6,7 +6,7 @@ Problem: An Istanbul-based e-commerce company needs to determine the fastest
 delivery routes from its central warehouse to two customer delivery zones,
 passing through regional hubs and distribution centers.
 
---- Code Explanation ---
+Code Explanation
 The graph was created using NetworkX as a Directed Graph (DiGraph).
 Nodes represent physical locations in the Istanbul delivery network:
 the central warehouse, regional hubs, distribution centers, and customer zones.
@@ -24,9 +24,8 @@ import matplotlib.patches as mpatches
 import pandas as pd
 import os
 
-# ─────────────────────────────────────────
 # 1. LOAD DATA
-# ─────────────────────────────────────────
+
 
 # Load the edge dataset from the CSV file.
 # Each row represents a one-way connection between two locations.
@@ -42,9 +41,8 @@ print("=" * 60)
 print(df.to_string(index=False))
 print()
 
-# ─────────────────────────────────────────
 # 2. BUILD THE GRAPH
-# ─────────────────────────────────────────
+
 
 # We use a directed graph (DiGraph) because deliveries flow in one direction:
 # from Warehouse → Hubs → Distribution Centers → Customer Zones.
@@ -65,9 +63,9 @@ print(f"Graph created with {G.number_of_nodes()} nodes and {G.number_of_edges()}
 print(f"Nodes: {list(G.nodes())}")
 print()
 
-# ─────────────────────────────────────────
+
 # 3. SHORTEST PATH ANALYSIS
-# ─────────────────────────────────────────
+
 
 # We apply Dijkstra's algorithm — the standard shortest path algorithm —
 # to find the optimal route from the Warehouse to each Customer Zone.
@@ -105,9 +103,7 @@ for target in targets:
     print(f"  Total Distance: {total_distance} km")
     print(f"  Total Cost    : ${total_cost}")
 
-# ─────────────────────────────────────────
 # 4. NETWORK VISUALIZATION
-# ─────────────────────────────────────────
 
 # We draw the full network and highlight the two optimal delivery paths.
 # Node colors indicate the role of each location in the supply chain:
@@ -208,9 +204,7 @@ plt.savefig(viz_path, dpi=150, bbox_inches="tight")
 print(f"\nVisualization saved to: {viz_path}")
 plt.close()
 
-# ─────────────────────────────────────────
 # 5. SAVE OUTPUT SUMMARY
-# ─────────────────────────────────────────
 
 output_path = os.path.join(results_dir, "solution_output.txt")
 with open(output_path, "w") as f:
